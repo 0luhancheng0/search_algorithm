@@ -1,0 +1,297 @@
+test case 1
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-R, N2:S-D}
+OPEN:	{(N1: S-R g=0 h=0.00 f=0.00), (N2: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N3:S-R-R}
+OPEN:	{(N3: S-R-R g=0 h=0.00 f=0.00), (N2: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N3	g=0 h=0.00 f=0.00
+Children:	{N4:S-R-R-D}
+OPEN:	{(N4: S-R-R-D g=0 h=0.00 f=0.00), (N2: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N3: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=2.00 f=2.00
+Children:	{N1:S-R, N2:S-D}
+OPEN:	{(N1: S-R g=2 h=1.50 f=3.50), (N2: S-D g=2 h=2.06 f=4.06)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.00 f=2.00)}
+
+N1	g=2 h=1.50 f=3.50
+Children:	{N3:S-R-R}
+OPEN:	{(N2: S-D g=2 h=2.06 f=4.06), (N3: S-R-R g=4 h=1.00 f=5.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.00 f=2.00), (N1: expansion_order=2 g=2 h=1.50 f=3.50)}
+
+N2	g=2 h=2.06 f=4.06
+Children:	{N4:S-D-D}
+OPEN:	{(N3: S-R-R g=4 h=1.00 f=5.00), (N4: S-D-D g=4 h=2.24 f=6.24)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.00 f=2.00), (N1: expansion_order=2 g=2 h=1.50 f=3.50), (N2: expansion_order=3 g=2 h=2.06 f=4.06)}
+
+test case 2
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-D}
+OPEN:	{(N1: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N2:S-D-R, N3:S-D-RD, N4:S-D-D}
+OPEN:	{(N2: S-D-R g=0 h=0.00 f=0.00), (N3: S-D-RD g=0 h=0.00 f=0.00), (N4: S-D-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N2	g=0 h=0.00 f=0.00
+Children:	{N5:S-D-R-D, N6:S-D-R-LD}
+OPEN:	{(N5: S-D-R-D g=0 h=0.00 f=0.00), (N6: S-D-R-LD g=0 h=0.00 f=0.00), (N3: S-D-RD g=0 h=0.00 f=0.00), (N4: S-D-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N2: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=1.12 f=1.12
+Children:	{N1:S-D}
+OPEN:	{(N1: S-D g=2 h=1.41 f=3.41)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=1.12 f=1.12)}
+
+N1	g=2 h=1.41 f=3.41
+Children:	{N2:S-D-R, N3:S-D-RD, N4:S-D-D}
+OPEN:	{(N2: S-D-R g=4 h=1.12 f=5.12), (N3: S-D-RD g=3 h=1.58 f=4.58), (N4: S-D-D g=4 h=1.80 f=5.80)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=1.12 f=1.12), (N1: expansion_order=2 g=2 h=1.41 f=3.41)}
+
+N3	g=3 h=1.58 f=4.58
+Children:	{N5:S-D-RD-R, N6:S-D-RD-L, N7:S-D-RD-U}
+OPEN:	{(N2: S-D-R g=4 h=1.12 f=5.12), (N4: S-D-D g=4 h=1.80 f=5.80), (N5: S-D-RD-R g=5 h=1.50 f=6.50)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=1.12 f=1.12), (N1: expansion_order=2 g=2 h=1.41 f=3.41), (N3: expansion_order=3 g=3 h=1.58 f=4.58)}
+
+test case 3
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-R, N2:S-L}
+OPEN:	{(N1: S-R g=0 h=0.00 f=0.00), (N2: S-L g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N3:S-R-D}
+OPEN:	{(N3: S-R-D g=0 h=0.00 f=0.00), (N2: S-L g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N3	g=0 h=0.00 f=0.00
+Children:}
+OPEN:	{(N2: S-L g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N3: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=1.50 f=1.50
+Children:	{N1:S-R, N2:S-L}
+OPEN:	{(N1: S-R g=2 h=1.00 f=3.00), (N2: S-L g=2 h=2.00 f=4.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=1.50 f=1.50)}
+
+N1	g=2 h=1.00 f=3.00
+Children:	{N3:S-R-D}
+OPEN:	{(N2: S-L g=2 h=2.00 f=4.00), (N3: S-R-D g=4 h=1.12 f=5.12)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=1.50 f=1.50), (N1: expansion_order=2 g=2 h=1.00 f=3.00)}
+
+N2	g=2 h=2.00 f=4.00
+Children:	{N4:S-L-D}
+OPEN:	{(N3: S-R-D g=4 h=1.12 f=5.12), (N4: S-L-D g=4 h=2.06 f=6.06)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=1.50 f=1.50), (N1: expansion_order=2 g=2 h=1.00 f=3.00), (N2: expansion_order=3 g=2 h=2.00 f=4.00)}
+
+test case 4
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-R, N2:S-RD, N3:S-D}
+OPEN:	{(N1: S-R g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N4:S-R-R, N5:S-R-RD, N6:S-R-D, N7:S-R-LD}
+OPEN:	{(N4: S-R-R g=0 h=0.00 f=0.00), (N5: S-R-RD g=0 h=0.00 f=0.00), (N6: S-R-D g=0 h=0.00 f=0.00), (N7: S-R-LD g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N4	g=0 h=0.00 f=0.00
+Children:	{N8:S-R-R-R, N9:S-R-R-D, N10:S-R-R-LD}
+OPEN:	{(N8: S-R-R-R g=0 h=0.00 f=0.00), (N9: S-R-R-D g=0 h=0.00 f=0.00), (N10: S-R-R-LD g=0 h=0.00 f=0.00), (N5: S-R-RD g=0 h=0.00 f=0.00), (N6: S-R-D g=0 h=0.00 f=0.00), (N7: S-R-LD g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N4: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=2.50 f=2.50
+Children:	{N1:S-R, N2:S-RD, N3:S-D}
+OPEN:	{(N1: S-R g=2 h=2.55 f=4.55), (N2: S-RD g=1 h=2.06 f=3.06), (N3: S-D g=2 h=2.00 f=4.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.50 f=2.50)}
+
+N2	g=1 h=2.06 f=3.06
+Children:	{N4:S-RD-R, N5:S-RD-L, N6:S-RD-U, N7:S-RD-RU}
+OPEN:	{(N1: S-R g=2 h=2.55 f=4.55), (N3: S-D g=2 h=2.00 f=4.00), (N4: S-RD-R g=3 h=2.24 f=5.24), (N7: S-RD-RU g=2 h=2.69 f=4.69)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.50 f=2.50), (N2: expansion_order=2 g=1 h=2.06 f=3.06)}
+
+N3	g=2 h=2.00 f=4.00
+Children:	{N8:S-D-D, N9:S-D-RU}
+OPEN:	{(N1: S-R g=2 h=2.55 f=4.55), (N4: S-RD-R g=3 h=2.24 f=5.24), (N7: S-RD-RU g=2 h=2.69 f=4.69), (N8: S-D-D g=4 h=1.50 f=5.50)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.50 f=2.50), (N2: expansion_order=2 g=1 h=2.06 f=3.06), (N3: expansion_order=3 g=2 h=2.00 f=4.00)}
+
+test case 5
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-R, N2:S-RD, N3:S-D}
+OPEN:	{(N1: S-R g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N4:S-R-R, N5:S-R-RD, N6:S-R-D, N7:S-R-LD}
+OPEN:	{(N4: S-R-R g=0 h=0.00 f=0.00), (N5: S-R-RD g=0 h=0.00 f=0.00), (N6: S-R-D g=0 h=0.00 f=0.00), (N7: S-R-LD g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N4	g=0 h=0.00 f=0.00
+Children:	{N8:S-R-R-R, N9:S-R-R-D, N10:S-R-R-LD}
+OPEN:	{(N8: S-R-R-R g=0 h=0.00 f=0.00), (N9: S-R-R-D g=0 h=0.00 f=0.00), (N10: S-R-R-LD g=0 h=0.00 f=0.00), (N5: S-R-RD g=0 h=0.00 f=0.00), (N6: S-R-D g=0 h=0.00 f=0.00), (N7: S-R-LD g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N4: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=3.35 f=3.35
+Children:	{N1:S-R, N2:S-RD, N3:S-D}
+OPEN:	{(N1: S-R g=2 h=3.16 f=5.16), (N2: S-RD g=1 h=2.69 f=3.69), (N3: S-D g=2 h=2.92 f=4.92)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.35 f=3.35)}
+
+N2	g=1 h=2.69 f=3.69
+Children:	{N4:S-RD-R, N5:S-RD-L, N6:S-RD-U, N7:S-RD-RU}
+OPEN:	{(N1: S-R g=2 h=3.16 f=5.16), (N3: S-D g=2 h=2.92 f=4.92), (N4: S-RD-R g=3 h=2.55 f=5.55), (N7: S-RD-RU g=2 h=3.04 f=5.04)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.35 f=3.35), (N2: expansion_order=2 g=1 h=2.69 f=3.69)}
+
+N3	g=2 h=2.92 f=4.92
+Children:	{N8:S-D-D, N9:S-D-RU}
+OPEN:	{(N1: S-R g=2 h=3.16 f=5.16), (N4: S-RD-R g=3 h=2.55 f=5.55), (N7: S-RD-RU g=2 h=3.04 f=5.04), (N8: S-D-D g=4 h=2.50 f=6.50)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.35 f=3.35), (N2: expansion_order=2 g=1 h=2.69 f=3.69), (N3: expansion_order=3 g=2 h=2.92 f=4.92)}
+
+test case 6
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-R, N2:S-RD, N3:S-D}
+OPEN:	{(N1: S-R g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N4:S-R-R, N5:S-R-RD, N6:S-R-D, N7:S-R-LD}
+OPEN:	{(N4: S-R-R g=0 h=0.00 f=0.00), (N5: S-R-RD g=0 h=0.00 f=0.00), (N6: S-R-D g=0 h=0.00 f=0.00), (N7: S-R-LD g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N4	g=0 h=0.00 f=0.00
+Children:	{N8:S-R-R-R, N9:S-R-R-RD, N10:S-R-R-D, N11:S-R-R-LD}
+OPEN:	{(N8: S-R-R-R g=0 h=0.00 f=0.00), (N9: S-R-R-RD g=0 h=0.00 f=0.00), (N10: S-R-R-D g=0 h=0.00 f=0.00), (N11: S-R-R-LD g=0 h=0.00 f=0.00), (N5: S-R-RD g=0 h=0.00 f=0.00), (N6: S-R-D g=0 h=0.00 f=0.00), (N7: S-R-LD g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N4: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=3.35 f=3.35
+Children:	{N1:S-R, N2:S-RD, N3:S-D}
+OPEN:	{(N1: S-R g=2 h=3.16 f=5.16), (N2: S-RD g=1 h=2.69 f=3.69), (N3: S-D g=2 h=2.92 f=4.92)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.35 f=3.35)}
+
+N2	g=1 h=2.69 f=3.69
+Children:	{N4:S-RD-R, N5:S-RD-RD, N6:S-RD-D, N7:S-RD-LD, N8:S-RD-L, N9:S-RD-U, N10:S-RD-RU}
+OPEN:	{(N1: S-R g=2 h=3.16 f=5.16), (N3: S-D g=2 h=2.92 f=4.92), (N4: S-RD-R g=3 h=2.55 f=5.55), (N5: S-RD-RD g=2 h=2.06 f=4.06), (N6: S-RD-D g=3 h=2.24 f=5.24), (N7: S-RD-LD g=2 h=2.50 f=4.50), (N10: S-RD-RU g=2 h=3.04 f=5.04)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.35 f=3.35), (N2: expansion_order=2 g=1 h=2.69 f=3.69)}
+
+N5	g=2 h=2.06 f=4.06
+Children:	{N11:S-RD-RD-R, N12:S-RD-RD-RD, N13:S-RD-RD-D, N14:S-RD-RD-LD, N15:S-RD-RD-L, N16:S-RD-RD-U, N17:S-RD-RD-RU}
+OPEN:	{(N1: S-R g=2 h=3.16 f=5.16), (N3: S-D g=2 h=2.92 f=4.92), (N4: S-RD-R g=3 h=2.55 f=5.55), (N6: S-RD-D g=3 h=2.24 f=5.24), (N7: S-RD-LD g=2 h=2.50 f=4.50), (N10: S-RD-RU g=2 h=3.04 f=5.04), (N11: S-RD-RD-R g=4 h=2.00 f=6.00), (N12: S-RD-RD-RD g=3 h=1.50 f=4.50), (N13: S-RD-RD-D g=4 h=1.58 f=5.58), (N14: S-RD-RD-LD g=3 h=1.80 f=4.80), (N17: S-RD-RD-RU g=3 h=2.50 f=5.50)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.35 f=3.35), (N2: expansion_order=2 g=1 h=2.69 f=3.69), (N5: expansion_order=3 g=2 h=2.06 f=4.06)}
+
+test case 7
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-R, N2:S-RD, N3:S-D}
+OPEN:	{(N1: S-R g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N4:S-R-R, N5:S-R-RD, N6:S-R-D, N7:S-R-LD}
+OPEN:	{(N4: S-R-R g=0 h=0.00 f=0.00), (N5: S-R-RD g=0 h=0.00 f=0.00), (N6: S-R-D g=0 h=0.00 f=0.00), (N7: S-R-LD g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N4	g=0 h=0.00 f=0.00
+Children:	{N8:S-R-R-R, N9:S-R-R-RD, N10:S-R-R-D, N11:S-R-R-LD}
+OPEN:	{(N8: S-R-R-R g=0 h=0.00 f=0.00), (N9: S-R-R-RD g=0 h=0.00 f=0.00), (N10: S-R-R-D g=0 h=0.00 f=0.00), (N11: S-R-R-LD g=0 h=0.00 f=0.00), (N5: S-R-RD g=0 h=0.00 f=0.00), (N6: S-R-D g=0 h=0.00 f=0.00), (N7: S-R-LD g=0 h=0.00 f=0.00), (N2: S-RD g=0 h=0.00 f=0.00), (N3: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N4: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=4.61 f=4.61
+Children:	{N1:S-R, N2:S-RD, N3:S-D}
+OPEN:	{(N1: S-R g=2 h=4.30 f=6.30), (N2: S-RD g=1 h=3.91 f=4.91), (N3: S-D g=2 h=4.24 f=6.24)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=4.61 f=4.61)}
+
+N2	g=1 h=3.91 f=4.91
+Children:	{N4:S-RD-R, N5:S-RD-RD, N6:S-RD-D, N7:S-RD-LD, N8:S-RD-L, N9:S-RD-U, N10:S-RD-RU}
+OPEN:	{(N1: S-R g=2 h=4.30 f=6.30), (N3: S-D g=2 h=4.24 f=6.24), (N4: S-RD-R g=3 h=3.61 f=6.61), (N5: S-RD-RD g=2 h=3.20 f=5.20), (N6: S-RD-D g=3 h=3.54 f=6.54), (N7: S-RD-LD g=2 h=3.91 f=5.91), (N10: S-RD-RU g=2 h=4.03 f=6.03)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=4.61 f=4.61), (N2: expansion_order=2 g=1 h=3.91 f=4.91)}
+
+N5	g=2 h=3.20 f=5.20
+Children:	{N11:S-RD-RD-R, N12:S-RD-RD-RD, N13:S-RD-RD-D, N14:S-RD-RD-LD, N15:S-RD-RD-L, N16:S-RD-RD-U, N17:S-RD-RD-RU}
+OPEN:	{(N1: S-R g=2 h=4.30 f=6.30), (N3: S-D g=2 h=4.24 f=6.24), (N4: S-RD-R g=3 h=3.61 f=6.61), (N6: S-RD-D g=3 h=3.54 f=6.54), (N7: S-RD-LD g=2 h=3.91 f=5.91), (N10: S-RD-RU g=2 h=4.03 f=6.03), (N11: S-RD-RD-R g=4 h=2.92 f=6.92), (N12: S-RD-RD-RD g=3 h=2.50 f=5.50), (N13: S-RD-RD-D g=4 h=2.83 f=6.83), (N14: S-RD-RD-LD g=3 h=3.20 f=6.20), (N17: S-RD-RD-RU g=3 h=3.35 f=6.35)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=4.61 f=4.61), (N2: expansion_order=2 g=1 h=3.91 f=4.91), (N5: expansion_order=3 g=2 h=3.20 f=5.20)}
+
+test case 8
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-D}
+OPEN:	{(N1: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N2:S-D-D}
+OPEN:	{(N2: S-D-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N2	g=0 h=0.00 f=0.00
+Children:	{N3:S-D-D-D}
+OPEN:	{(N3: S-D-D-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N2: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=3.50 f=3.50
+Children:	{N1:S-D}
+OPEN:	{(N1: S-D g=2 h=3.54 f=5.54)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.50 f=3.50)}
+
+N1	g=2 h=3.54 f=5.54
+Children:	{N2:S-D-D}
+OPEN:	{(N2: S-D-D g=4 h=3.64 f=7.64)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.50 f=3.50), (N1: expansion_order=2 g=2 h=3.54 f=5.54)}
+
+N2	g=4 h=3.64 f=7.64
+Children:	{N3:S-D-D-D}
+OPEN:	{(N3: S-D-D-D g=6 h=3.81 f=9.81)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=3.50 f=3.50), (N1: expansion_order=2 g=2 h=3.54 f=5.54), (N2: expansion_order=3 g=4 h=3.64 f=7.64)}
+
+test case 9
+DLS output
+N0	g=0 h=0.00 f=0.00
+Children:	{N1:S-R, N2:S-D}
+OPEN:	{(N1: S-R g=0 h=0.00 f=0.00), (N2: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00)}
+
+N1	g=0 h=0.00 f=0.00
+Children:	{N3:S-R-R}
+OPEN:	{(N3: S-R-R g=0 h=0.00 f=0.00), (N2: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00)}
+
+N3	g=0 h=0.00 f=0.00
+Children:	{N4:S-R-R-R}
+OPEN:	{(N4: S-R-R-R g=0 h=0.00 f=0.00), (N2: S-D g=0 h=0.00 f=0.00)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=0.00 f=0.00), (N1: expansion_order=2 g=0 h=0.00 f=0.00), (N3: expansion_order=3 g=0 h=0.00 f=0.00)}
+
+A output
+N0	g=0 h=2.50 f=2.50
+Children:	{N1:S-R, N2:S-D}
+OPEN:	{(N1: S-R g=2 h=2.12 f=4.12), (N2: S-D g=2 h=2.24 f=4.24)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.50 f=2.50)}
+
+N1	g=2 h=2.12 f=4.12
+Children:	{N3:S-R-R}
+OPEN:	{(N2: S-D g=2 h=2.24 f=4.24), (N3: S-R-R g=4 h=1.80 f=5.80)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.50 f=2.50), (N1: expansion_order=2 g=2 h=2.12 f=4.12)}
+
+N2	g=2 h=2.24 f=4.24
+Children:	{N4:S-D-D}
+OPEN:	{(N3: S-R-R g=4 h=1.80 f=5.80), (N4: S-D-D g=4 h=2.06 f=6.06)}
+CLOSED:	{(N0: expansion_order=1 g=0 h=2.50 f=2.50), (N1: expansion_order=2 g=2 h=2.12 f=4.12), (N2: expansion_order=3 g=2 h=2.24 f=4.24)}
+
